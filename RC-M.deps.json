@@ -8,7 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "RC-M/1.0.0": {
         "dependencies": {
-          "Costura.Fody": "5.7.0"
+          "Costura.Fody": "5.7.0",
+          "SuperSocket": "1.6.6.1",
+          "SuperSocket.WebSocket": "1.6.6.1",
+          "SuperWebSocket": "0.9.0.2"
         },
         "runtime": {
           "RC-M.dll": {}
@@ -27,6 +30,14 @@
         }
       },
       "Fody/6.5.5": {},
+      "log4net/2.0.3": {
+        "runtime": {
+          "lib/net40-full/log4net.dll": {
+            "assemblyVersion": "1.2.13.0",
+            "fileVersion": "1.2.13.0"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -84,6 +95,14 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Newtonsoft.Json/5.0.8": {
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "5.0.8.16617"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -132,6 +151,53 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "SuperSocket/1.6.6.1": {
+        "dependencies": {
+          "log4net": "2.0.3"
+        },
+        "runtime": {
+          "lib/net45/SuperSocket.Common.dll": {
+            "assemblyVersion": "1.6.6.1",
+            "fileVersion": "1.6.6.1"
+          },
+          "lib/net45/SuperSocket.Facility.dll": {
+            "assemblyVersion": "1.6.6.1",
+            "fileVersion": "1.6.6.1"
+          },
+          "lib/net45/SuperSocket.SocketBase.dll": {
+            "assemblyVersion": "1.6.6.1",
+            "fileVersion": "1.6.6.1"
+          }
+        }
+      },
+      "SuperSocket.WebSocket/1.6.6.1": {
+        "dependencies": {
+          "SuperSocket": "1.6.6.1",
+          "log4net": "2.0.3"
+        },
+        "runtime": {
+          "lib/net45/SuperSocket.WebSocket.dll": {
+            "assemblyVersion": "1.6.6.1",
+            "fileVersion": "1.6.6.1"
+          }
+        }
+      },
+      "SuperWebSocket/0.9.0.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "5.0.8",
+          "log4net": "2.0.3"
+        },
+        "runtime": {
+          "lib/net40/SuperSocket.SocketEngine.dll": {
+            "assemblyVersion": "1.6.0.4",
+            "fileVersion": "1.6.0.4"
+          },
+          "lib/net40/SuperWebSocket.dll": {
+            "assemblyVersion": "0.9.0.0",
+            "fileVersion": "0.9.0.0"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -715,6 +781,13 @@
       "path": "fody/6.5.5",
       "hashPath": "fody.6.5.5.nupkg.sha512"
     },
+    "log4net/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rxMHzK5efGPo5XtRnuUGO4tfW5l74Aji6kVmtMAt2SgcB5PHBNtNY7yj2LCI2VtKrLPO7kCKR6kH6lIZggq3Gg==",
+      "path": "log4net/2.0.3",
+      "hashPath": "log4net.2.0.3.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -742,6 +815,13 @@
       "sha512": "sha512-WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/5.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M+Bxorslg+4rXGF5WWsE12gmJ0Cn5CJ95godh2vOo7073YF2WNOi7I26tnwCD43uxcG4224ctNWHOEOvV1VNOQ==",
+      "path": "newtonsoft.json/5.0.8",
+      "hashPath": "newtonsoft.json.5.0.8.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -854,6 +934,27 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "SuperSocket/1.6.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mowf1siOQwqxQH+FE+UO9b29GjHEtT/p5rxTHvcgfaIdwcRqMUAzEJELBA/M8wDn/BIE/XMojeyNaoqfGECX8A==",
+      "path": "supersocket/1.6.6.1",
+      "hashPath": "supersocket.1.6.6.1.nupkg.sha512"
+    },
+    "SuperSocket.WebSocket/1.6.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gEHL/NH67cnnzXG1S8+WTdDL/zXhtBh08NVRp8OelpmP9R8S5KxsfX4tf2/Cyotn4Hq9y+9iyG4gau0jFz4ToA==",
+      "path": "supersocket.websocket/1.6.6.1",
+      "hashPath": "supersocket.websocket.1.6.6.1.nupkg.sha512"
+    },
+    "SuperWebSocket/0.9.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LL9VMo6eqAQ0yCF1P9UCEaitEABt2p77eHmTsApNzJwoDyhHwn/LrYarOvOZZdgPjF3Ro3s36dba2TmnY9uFVA==",
+      "path": "superwebsocket/0.9.0.2",
+      "hashPath": "superwebsocket.0.9.0.2.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
